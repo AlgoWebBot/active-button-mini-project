@@ -1,0 +1,39 @@
+<html>
+<title>Active Button</title>
+<style>
+    .active{
+        background: red;
+        height: 45px;
+        width: 80px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <button class="btn">button1</button>
+    <button class="btn">button2</button>
+    <button class="btn">button3</button>
+    <button class="btn">button4</button>
+    <button class="btn">button5</button>
+</body>
+
+    <script>
+        const buttons = document.querySelectorAll('.btn');
+        buttons.forEach((button)=>{
+            button.addEventListener('click', ()=>{
+                removeActiveClass();
+                button.classList.add('active');
+            })
+        })
+
+        function removeActiveClass(){
+            buttons.forEach((button)=>{
+                button.classList.remove('active');
+            })
+        }
+
+
+    </script>
+
+
+</html>
